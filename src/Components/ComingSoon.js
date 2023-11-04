@@ -54,26 +54,27 @@ function ComingSoon() {
 
   const { days, hours, minutes, seconds } = timeLeft;
   // console.log(String(days).split("")[0]);
+
   // days split
-  const initialNum = String(days).split("")[0];
-  const lastNum = String(days).split("")[1];
+  const initialNum = String(days).padStart(2, "0").split("")[0];
+  const lastNum = String(days).padStart(2, "0").split("")[1];
 
   // hours split
-  const initialHour = String(hours).split("")[0];
-  const lastHour = String(hours).split("")[1];
+  const initialHour = String(hours).padStart(2, "0").split("")[0];
+  const lastHour = String(hours).padStart(2, "0").split("")[1];
 
   // minutes split
-  const initialMinute = String(minutes).split("")[0];
-  const lastMinute = String(minutes).split("")[1];
+  const initialMinute = String(minutes).padStart(2, "0").split("")[0];
+  const lastMinute = String(minutes).padStart(2, "0").split("")[1];
 
   // seconds split
-  const initialSecond = String(seconds).split("")[0];
-  const lastSecond = String(seconds).split("")[1];
-
+  const initialSecond = String(seconds).padStart(2, "0").split("")[0];
+  const lastSecond = String(seconds).padStart(2, "0").split("")[1];
+  // console.log(seconds);
   return (
     <>
-      <div className="w-[100%]   bg-fixed h-screen bg-no-repeat object-cover bg-center bg-cover bg-[url('./Components/Resource.png')]">
-        <div className="pt-[40px] ml-[50px]">
+      <div className="w-full  bg-fixed min-h-screen bg-no-repeat object-cover bg-center bg-cover bg-[url('./Components/Resource.png')]">
+        <div className="pt-10 ml-5 ">
           <svg width="90" height="35" viewBox="0 0 130 75" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               fill-rule="evenodd"
@@ -88,11 +89,11 @@ function ComingSoon() {
           </svg>
         </div>
         <div className=" mt-[100px] flex justify-center items-center">
-          <div className=" items-center  flex flex-col ">
-            <h1 className=" font-normal text-[#fff] text-[96px] ">Launching Soon</h1>
-            <div className=" w-[700px] mt-[30px]  flex justify-between items-center text-[#fff] ">
+          <div className=" items-center justify-center  flex flex-col ">
+            <h1 className="font-normal text-white text-6xl sm:text-7xl md:text-8xl">Launching Soon</h1>
+            <div className=" w-[700px] mt-[30px] md:flex phone:grid phone:items-center  phone:justify-center flex md:justify-between items-center text-[#fff] ">
               {" "}
-              <div className=" flex flex-col justify-center items-center">
+              <div className="w-full mt-8 sm:mt-10 md:mt-12 md:flex-col flex flex-col sm:flex-row justify-center items-center text-white">
                 <div className=" flex w-[135px] justify-between text-center ">
                   <span className="  span  text-[#fff] bg-white flex justify-center items-center text-center rounded-[5px]  bg-opacity-[0.2] font-[mono] text-[96px] w-[62.5px] h-[120px]">
                     <TimerBox value={initialNum} />
@@ -103,7 +104,7 @@ function ComingSoon() {
                 </div>
                 <span className=" font-[poppins] text-[26px]  mt-[15px] ">DAYS</span>
               </div>
-              <div className=" flex flex-col justify-center items-center">
+              <div className="w-full mt-8 sm:mt-10 md:mt-12 md:flex-col flex flex-col sm:flex-row justify-center items-center text-white">
                 <div className=" flex w-[135px] justify-between text-center ">
                   <span className="  span  text-[#fff] bg-white flex justify-center items-center text-center rounded-[5px]  bg-opacity-[0.2] font-[mono] text-[96px] w-[62.5px] h-[120px]">
                     {/* {timeLeft.hours} */}
@@ -116,7 +117,7 @@ function ComingSoon() {
                 </div>
                 <span className=" font-[poppins] text-[26px]  mt-[15px] ">HOURS</span>
               </div>
-              <div className=" flex flex-col justify-center items-center">
+              <div className="w-full mt-8 sm:mt-10 md:mt-12 md:flex-col flex flex-col sm:flex-row justify-center items-center text-white">
                 <div className=" flex w-[135px] justify-between text-center ">
                   <span className="  span  text-[#fff] bg-white flex justify-center items-center text-center rounded-[5px]  bg-opacity-[0.2] font-[mono] text-[96px] w-[62.5px] h-[120px]">
                     <TimerBox value={initialMinute} />
@@ -127,7 +128,7 @@ function ComingSoon() {
                 </div>
                 <span className=" font-[poppins] text-[26px]  mt-[15px] ">MINUTES</span>
               </div>
-              <div className=" flex flex-col justify-center items-center">
+              <div className="w-full mt-8 sm:mt-10 md:mt-12 md:flex-col flex flex-col sm:flex-row justify-center items-center text-white">
                 <div className=" flex w-[135px] justify-between text-center ">
                   <span className="  span  text-[#fff] bg-white flex justify-center items-center text-center rounded-[5px]  bg-opacity-[0.2] font-[mono] text-[96px] w-[62.5px] h-[120px]">
                     <TimerBox value={initialSecond} />
@@ -142,10 +143,10 @@ function ComingSoon() {
           </div>
         </div>
         <div className=" flex flex-col justify-center  mt-[60px] items-center font-[poppins] ">
-          <p className=" font-[300] text-[20px] text-[#fff]">We’ll let you know when we are Launching</p>
-          <div className=" mt-[12px] rounded-[10px] flex items-center justify-between w-[350px] ">
-            <input className="h-[55px] outline-none text-[16px] rounded-l-[10px] pl-[15px] w-[80%] bg-white placeholder:text-[#000] placeholder:text-opacity-50 " placeholder="Email Address" type="email" />
-            <button className="bg-[#31B8D6] text-[18px] w-[120px] h-[55px] text-center text-[#fff] rounded-r-[10px] " type="submit">
+          <p className=" font-[300] text-[20px] text-[#f6f6f6]">We’ll let you know when we are Launching</p>
+          <div className=" phone:pb-[50px] mt-[12px] rounded-[10px] flex items-center justify-between w-[350px] ">
+            <input className="h-[55px] outline-none text-[16px] rounded-l-[10px] pl-[15px] w-[80%] bg-[#f6f6f6] placeholder:text-[#000] placeholder:text-opacity-50 " placeholder="Email Address" type="email" />
+            <button className="bg-[#31B8D6] text-[18px] w-[120px] h-[55px] text-center text-[#f4f4f4] rounded-r-[10px] " type="submit">
               Notify Me
             </button>
           </div>
