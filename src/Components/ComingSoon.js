@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
+
 function TimerBox({ value, label }) {
   return (
     <div className="countdown-box">
-      <span>{value < 10 ? `${value}` : value}</span>
+      <span>{value < 10 ? `${value}` : value} </span>
       {label}
     </div>
   );
