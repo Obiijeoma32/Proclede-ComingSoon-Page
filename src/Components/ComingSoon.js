@@ -77,8 +77,8 @@ function ComingSoon() {
         <div className="pt-10 ml-5 ">
           <svg width="90" height="35" viewBox="0 0 130 75" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M88.95 3.35C90.074 5.193 90.994 7.439 90.996 8.342C90.999 9.748 92.65 10.037 102.47 10.348C116.62 10.797 116.988 11.065 117.198 21.048C117.416 31.37 116.951 31.7 102.17 31.7C92.025 31.7 90.023 31.426 87.574 29.7C86.013 28.6 83.782 27.144 82.618 26.465C81.045 25.547 80.91 25.226 82.095 25.215C88.493 25.156 89.829 6.995 83.749 2.737C81.935 1.466 77.701 1.2 59.314 1.2H37.072L36.786 10.95L36.5 20.7L24.197 20.981L11.893 21.262L12.197 15.981L12.5 10.7H23H33.5L33.805 5.95L34.11 1.2H17.055H0V21.2V41.2H5.945H11.89L12.195 36.45L12.5 31.7L27.5 31.2C36.629 30.896 43.34 30.219 44.645 29.471C47.424 27.879 49 23.228 49 16.617C49 10.383 48.652 10.511 64.302 11.018C73.29 11.309 74.188 11.519 75.112 13.546C75.793 15.04 75.784 16.639 75.084 18.478L74.05 21.2H63.025C52.219 21.2 52 21.245 52 23.477C52 28.21 47.47 32.723 41.5 33.938C37.928 34.665 37.466 35.097 37.187 37.976L36.873 41.2H42.937H49V36.169V31.138L61.185 31.419L73.37 31.7L75.441 35.7C78.405 41.423 82.845 42.38 104.566 41.984C128.516 41.546 129.243 40.933 129.243 21.2C129.243 1.428 128.539 0.839998 104.25 0.349998L86.908 0L88.95 3.35Z"
               fill="#F4F4F4"
             />
@@ -89,7 +89,7 @@ function ComingSoon() {
           </svg>
         </div>
         <div className=" mt-[100px] flex justify-center items-center">
-          <div className=" items-center justify-center  flex flex-col ">
+          <div className=" items-center w-auto justify-center  flex flex-col ">
             <h1 className="font-normal text-white text-6xl sm:text-7xl md:text-8xl">Launching Soon</h1>
             <div className=" w-[700px] mt-[30px] md:flex phone:grid phone:items-center  phone:justify-center flex md:justify-between items-center text-[#fff] ">
               {" "}
