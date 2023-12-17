@@ -17,7 +17,7 @@ function ComingSoon() {
     seconds: 0,
   });
   const calculateCountdown = () => {
-    const targetDate = new Date("2023-11-31T23:59:59");
+    const targetDate = new Date("2024-02-31T23:59:59");
     const now = new Date();
     const timeDifference = targetDate - now;
 
